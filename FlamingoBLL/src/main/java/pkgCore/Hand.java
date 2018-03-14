@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import pkgEnum.eRank;
+//import pkgException.HandException;
 
 public class Hand {
 
@@ -11,6 +12,8 @@ public class Hand {
 	private ArrayList<Card> hand;
 	private int handValue;
 	private int Count;
+	
+	
 	
 	
 	public Hand()
@@ -24,8 +27,14 @@ public class Hand {
 	}
 	
 	
-	public int[] ScoreHand()
+	public int[] ScoreHand() //throws HandException
 	{
+		
+		/*if(hand.size() < 2) {
+			throw new handException("Hand too small", this);
+		}*/
+		
+		
 		//ArrayList<Integer> scores = new ArrayList<Integer>();
 		int [] iScore = new int[2];
 		int CountACE = 0;

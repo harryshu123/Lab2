@@ -34,8 +34,6 @@ public class Hand {
 			throw new handException("Hand too small", this);
 		}*/
 		
-		
-		//ArrayList<Integer> scores = new ArrayList<Integer>();
 		int [] iScore = new int[2];
 		int CountACE = 0;
 		iScore[0] = 0;

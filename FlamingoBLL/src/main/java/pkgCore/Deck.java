@@ -46,7 +46,7 @@ public class Deck {
 		}*/
 		
 	}
-	public int getRemaining(Object c) {
+	public int getRemaining(Object c) throws Exception {
 		int sumR = 0;
 		if(c instanceof eRank) {
 			for(Card c1 : Cards) {
@@ -55,12 +55,15 @@ public class Deck {
 				}
 			}
 		}
-		if(c instanceof eSuit) {
+		else if(c instanceof eSuit) {
 			for(Card c1 : Cards) {
 				if(c1.geteSuit() == c) {
 					sumR++;
 				}
 			}
+		}
+		else {
+			throw new Exception("it is not a Rank or Suit");
 		}
 		return sumR;
 	}
